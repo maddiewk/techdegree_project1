@@ -63,4 +63,4 @@ function printQuote (getRandomQuote) {
   <span class="year"> [year here] </span>
 </p>
 }
-printQuote();
+printQuote(); //print out quote
