@@ -2,7 +2,7 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-// array of five quote objects
+// create an array containing five quote objects, each with five properties
 var quotes = [
   {
     quote: "It does not do to dwell on dreams and forget to live.",
@@ -45,14 +45,14 @@ var quotes = [
   }
 ];
 
-// display random quote
+// use Math.random() to create a random number, then use that number to display one of the array objects at random
 function getRandomQuote() {
     var randomNumber = Math.floor(Math.random() * quotes.length);
     var randQuote = quotes[randomNumber];
     return randQuote;
   }
 
-// organize quotes and print to page
+// call the getRandomQuote function here and access the value in each quote object, then print random quotes using HTML to the page
 function printQuote () {
   var random = getRandomQuote();
 
@@ -67,4 +67,4 @@ function printQuote () {
   html += '<span class="tag"' + random.tag + '</span></p>';
   document.getElementById('quote-box').innerHTML = html;
 }
-printQuote(); //call the function and print out quote
+printQuote(); //call the printQuote function and print out quote
