@@ -29,7 +29,7 @@ var quotes = [
   },
 
   {
-    quote: "A hungry artist prefers bread to a beautiful painting, and a man in love prefers a woman to his public career; yet the painting may be of the greatest importance to the one and public office to the other.",
+    quote: "Whatever we look at, and however we look at it, we see only through our own eyes.",
     source: "C. G. Jung",
     citation: "Modern Man in Search of a Soul",
     year: 1933,
