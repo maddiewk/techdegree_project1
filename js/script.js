@@ -47,8 +47,9 @@ var quotes = [
 
 // display random quote
 function getRandomQuote() {
-    Math.floor(Math.random() * quotes.length);
-    return getRandomQuote;
+    var randomNumber = Math.floor(Math.random() * quotes.length);
+    var randQuote = quotes[randomNumber];
+    return randQuote;
   }
 
 // organize quotes and print to page
@@ -57,8 +58,12 @@ function printQuote () {
 
   var html = '<p class="quote">' + random.quote + '</p>';
   html += '<p class="source">' + random.source;
-  html += '<span class="citation">' + random.citation + '</span>';
+  if (random.citation) {
+    html += '<span class="citation">' + random.citation + '</span>';
+  }
+  if (random.year) {
   html += '<span class="year">' + random.year + '</span>';
+}
   html += '<span class="tag"' + random.tag + '</span></p>';
   document.getElementById('quote-box').innerHTML = html;
 }
