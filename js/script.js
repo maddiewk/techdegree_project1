@@ -51,20 +51,21 @@ function getRandomQuote() {
     var randQuote = quotes[randomNumber];
     return randQuote;
   }
-
+// create random background color; using Math.random(), get random numbers and assign them to an RGB value
 function getRandomColor() {
   var red = Math.floor(Math.random() * 256);
   var green = Math.floor(Math.random() * 256);
   var blue = Math.floor(Math.random() * 256);
   var rgbValue = "rgb(" + red + ", " + green + ", " + blue +")";
-  return rgbValue;
-
+  document.body.style.backgroundColor = rgbValue;
 }
 
 // call the getRandomQuote function here and access the value in each quote object, then print random quotes using HTML to the page
+// call getRandomColor function to set a different background color each time the button is clicked
 function printQuote () {
   var random = getRandomQuote();
   var intervalId = setInterval(printQuote, 10000);
+  getRandomColor();
 
   var html = '<p class="quote">' + random.quote + '</p>';
   html += '<p class="source">' + random.source;
@@ -77,7 +78,7 @@ function printQuote () {
   if (random.tag) {
   html += '<span class="tag">' + random.tag + '</span></p>';
 }
-  document.getElementById('quote-box').innerHTML = html;
-
+ document.getElementById('quote-box').innerHTML = html;
 }
+
 printQuote(); //call the printQuote function and print out quote
