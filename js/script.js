@@ -64,7 +64,10 @@ function printQuote () {
   if (random.year) {
   html += '<span class="year">' + random.year + '</span>';
 }
-  html += '<span class="tag"' + random.tag + '</span></p>';
+  if (random.tag) {
+  html += '<span class="tag">' + random.tag + '</span></p>';
+}
   document.getElementById('quote-box').innerHTML = html;
+
 }
 printQuote(); //call the printQuote function and print out quote
