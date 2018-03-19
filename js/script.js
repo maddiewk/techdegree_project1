@@ -45,22 +45,21 @@ var quotes = [
   }
 ];
 
-var random;
-
 // display random quote
 function getRandomQuote() {
-  for( var i = 0; i <= quotes.length; i += 1 ) {
-    random = Math.floor((Math.random() * quotes.length) + 1);
-    return random;
+    Math.floor(Math.random() * quotes.length);
+    return getRandomQuote;
   }
 
-}
 // organize quotes and print to page
-function printQuote (getRandomQuote) {
-  <p class="quote"> [quote here] </p>
-<p class="source"> [source here]
-  <span class="citation"> [citation here] </span>
-  <span class="year"> [year here] </span>
-</p>
+function printQuote () {
+  var random = getRandomQuote();
+
+  var html = '<p class="quote">' + random.quote + '</p>';
+  html += '<p class="source">' + random.source;
+  html += '<span class="citation">' + random.citation + '</span>';
+  html += '<span class="year">' + random.year + '</span>';
+  html += '<span class="tag"' + random.tag + '</span></p>';
+  document.getElementById('quote-box').innerHTML = html;
 }
-printQuote(); //print out quote
+printQuote(); //call the function and print out quote
