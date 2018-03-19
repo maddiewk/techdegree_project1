@@ -52,9 +52,19 @@ function getRandomQuote() {
     return randQuote;
   }
 
+function getRandomColor() {
+  var red = Math.floor(Math.random() * 256);
+  var green = Math.floor(Math.random() * 256);
+  var blue = Math.floor(Math.random() * 256);
+  var rgbValue = "rgb(" + red + ", " + green + ", " + blue +")";
+  return rgbValue;
+
+}
+
 // call the getRandomQuote function here and access the value in each quote object, then print random quotes using HTML to the page
 function printQuote () {
   var random = getRandomQuote();
+  var intervalId = setInterval(printQuote, 5000);
 
   var html = '<p class="quote">' + random.quote + '</p>';
   html += '<p class="source">' + random.source;
