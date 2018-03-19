@@ -64,7 +64,7 @@ function getRandomColor() {
 // call getRandomColor function to set a different background color each time the button is clicked
 function printQuote () {
   var random = getRandomQuote();
-  var intervalId = setInterval(printQuote, 10000);
+  var intervalId = setInterval(printQuote, 30000);
   getRandomColor();
 
   var html = '<p class="quote">' + random.quote + '</p>';
