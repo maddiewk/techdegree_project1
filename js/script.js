@@ -60,6 +60,7 @@ function getRandomColor() {
   document.body.style.backgroundColor = rgbValue;
 }
 
+// create a function using the setInterval() method to automatically display a new quote to the page every 20 seconds
 function refreshQuote() {
   var intervalId = setInterval(printQuote, 20000);
 }
