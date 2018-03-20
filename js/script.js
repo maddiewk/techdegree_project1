@@ -61,15 +61,16 @@ function getRandomColor() {
 }
 
 function refreshQuote() {
-  var intervalId = setInterval(printQuote, 30000);
+  var intervalId = setInterval(printQuote, 3000);
 }
 
 // call the getRandomQuote function here and access the value in each quote object, then print random quotes using HTML to the page
 // call getRandomColor function to set a different background color each time the button is clicked
 function printQuote () {
+  refreshQuote();
   var random = getRandomQuote();
   getRandomColor();
-  refreshQuote();
+
   var html = '<p class="quote">' + random.quote + '</p>';
   html += '<p class="source">' + random.source;
   if (random.citation) {
