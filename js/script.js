@@ -61,13 +61,12 @@ function getRandomColor() {
 }
 
 function refreshQuote() {
-  var intervalId = setInterval(printQuote, 3000);
+  var intervalId = setInterval(printQuote, 20000);
 }
 
 // call the getRandomQuote function here and access the value in each quote object, then print random quotes using HTML to the page
 // call getRandomColor function to set a different background color each time the button is clicked
 function printQuote () {
-  refreshQuote();
   var random = getRandomQuote();
   getRandomColor();
 
@@ -85,4 +84,6 @@ function printQuote () {
  document.getElementById('quote-box').innerHTML = html;
 }
 
+
 printQuote(); //call the printQuote function and print out quote
+refreshQuote(); // call the refreshQuote function to automatically display a new quote every 20 seconds
