@@ -45,13 +45,13 @@ var quotes = [
   }
 ];
 
-// use Math.random() to create a random number, then use that number to display one of the array objects at random
+// use Math.random() to generate a random number, then use that number to display one of the array objects at random
 function getRandomQuote() {
     var randomNumber = Math.floor(Math.random() * quotes.length);
     var randQuote = quotes[randomNumber];
     return randQuote;
   }
-// create random background color; using Math.random(), get random numbers and assign them to an RGB value
+// create random background color; using Math.random(), get three random numbers and assign them to an RGB value
 function getRandomColor() {
   var red = Math.floor(Math.random() * 256);
   var green = Math.floor(Math.random() * 256);
@@ -65,8 +65,9 @@ function refreshQuote() {
   var intervalId = setInterval(printQuote, 20000);
 }
 
-// call the getRandomQuote function here and access the value in each quote object, then print random quotes using HTML to the page
-// call getRandomColor function to set a different background color each time the button is clicked
+// create a function called printQuote
+// call the getRandomQuote function and access the five property values in each quote object, then print random quotes using HTML
+// call getRandomColor function to set a different background color each time a new quote is displayed
 function printQuote () {
   var random = getRandomQuote();
   getRandomColor();
