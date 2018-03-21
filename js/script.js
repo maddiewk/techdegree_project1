@@ -86,6 +86,5 @@ function printQuote () {
  document.getElementById('quote-box').innerHTML = html;
 }
 
-
 printQuote(); //call the printQuote function and print out quote
 refreshQuote(); // call the refreshQuote function to automatically display a new quote every 20 seconds
